@@ -1,4 +1,4 @@
-// Regular expressions for name
+// for name input
 function nameRegEx(name) {
   let letter = new RegExp("^((?=.*[a-z])|(?=.*[A-Z]))"); // At least one letter
   let maxLength = new RegExp("^(?=.{1,10}$)"); // Min 1 max 10 leng. controll
@@ -10,7 +10,8 @@ function nameRegEx(name) {
     return true;
   }
 }
-// Regular expressions for username input
+
+// for username input
 function usernameRegEx(username) {
   let length = new RegExp("^(?=.{3,10}$)"); // Min 3 max 10 len. controll
   let specialCharacter = new RegExp("^(?=.[!@#\$%\^&])"); // Special char. controll
@@ -23,6 +24,7 @@ function usernameRegEx(username) {
   }
 }
 
+// for mail input
 function mailRegEx(mail) {
   let mailControl = /^(([^<>()[\]{}'^?\\.,!|//#%*-+=&;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
   if(!mailControl.test(mail)){
@@ -32,6 +34,7 @@ function mailRegEx(mail) {
   }
 }
 
+// for password input
 function passwordRegEx(password) {
   let lowerCase = new RegExp("^(?=.*[a-z])");
   let upperCase = new RegExp("^(?=.*[A-Z])");
